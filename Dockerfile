@@ -1,5 +1,4 @@
-
-FROM python:3.10-slim
+FROM tensorflow/tensorflow:2.15.0
 
 # Ορίζουμε τον φάκελο εργασίας μέσα στον server
 WORKDIR /app
