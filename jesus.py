@@ -5,7 +5,7 @@ import io
 import tensorflow as tf
 
 app = FastAPI()
-model = tf.keras.models.load_model("my_model.keras")
+model = tf.keras.models.load_model("my_model.keras", compile=False)
 
 @app.post("/predict/")
 async def predict(file: UploadFile = File(...)):
