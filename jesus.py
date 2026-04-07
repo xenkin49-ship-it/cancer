@@ -3,9 +3,10 @@ from fastapi import FastAPI, UploadFile, File
 from PIL import Image
 import io
 import tensorflow as tf
+import tf_keras as keras
 
 app = FastAPI()
-model = tf.keras.models.load_model("my_model.keras", compile=False)
+model = keras.models.load_model("my_model.keras", compile=False)
 
 @app.post("/predict/")
 async def predict(file: UploadFile = File(...)):
